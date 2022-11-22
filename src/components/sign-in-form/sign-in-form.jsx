@@ -46,7 +46,7 @@ const SignInForm = () => {
           alert("no user found with this email ID");
           break;
         default:
-          console.log(error.code9);
+          console.log(error.code);
       }
     }
   };
