@@ -6,8 +6,6 @@ import "./checkOut.styles.scss";
 
 const CheckOut = () => {
   const { cartItems, cartTotal } = useContext(CartContext);
-
-  console.log(cartItems);
   return (
     <div className="checkout-container">
       <div className="checkout-header">
