@@ -3,8 +3,6 @@ import Button, {BUTTON_TYPE_CLASSES} from "../button/button.component";
 import FormInput from "../form-input/form-input.component";
 import {
   signInWithGooglePopup,
-  createUserDocumentFromAuth,
-  SignInAuthUserWithEmailAndPassword,
 } from "../../utils/firebase/firebase.utils";
 
 import "./sign-in-form.styles.scss";
@@ -31,11 +29,6 @@ const SignInForm = () => {
     event.preventDefault();
 
     try {
-      const { user } = await SignInAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
-
       resetFormFields();
     } catch (error) {
       switch (error.code) {
